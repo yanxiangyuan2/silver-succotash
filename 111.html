@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .container {
+            position: relative; /* 定位容器 */
+            height: 90vh; /* 容器高度为视口高度 */
+            display: flex; /* 使用Flexbox布局 */
+            flex-direction: column; /* 子元素垂直排列 */
+            justify-content: flex-start; /* 垂直顶部对齐 */
+            align-items: center; /* 水平居中 */
+            margin-top: -50px; /* 向上移动50像素 */
+        }
+
+        .button {
+            display: inline-block;
+            width: 100px; /* 按钮宽度 */
+            height: 40px; /* 按钮高度 */
+            margin: 10px;
+            background-color: #f0f0f0; /* 背景颜色 */
+            border: 2px solid #ccc; /* 边框样式 */
+            border-radius: 5px; /* 圆角 */
+            text-align: center; /* 文字居中 */
+            line-height: 40px; /* 文字垂直居中 */
+            font-size: 30px; /* 字体大小 */
+            cursor: pointer; /* 鼠标悬停时显示手型 */
+            transition: background-color 0.3s ease; /* 动画效果 */
+            font-family: "楷体"; /* 设置字体为楷体 */
+            color: #9400D3; /* 设置文字颜色为淡紫色 */
+        }
+
+        /* 鼠标悬停时的样式 */
+        .button:hover {
+            background-color: #e0e0e0; /* 悬停时的背景颜色 */
+        }
+
+        /* 按钮被选中时的样式 */
+        .button.selected {
+            background-color: #d0d0d0; /* 选中时的背景颜色 */
+        }
+
+        /* 提示文字的样式 */
+        #message {
+            margin-top: 20px;
+            font-size: 30px;
+            color: #9400D3; /* 设置文字颜色为淡紫色 */
+            display: none; /* 默认不显示 */
+            text-align: center; /* 文字居中 */
+            font-family: "楷体"; /* 设置字体为楷体 */
+        }
+
+        /* 文本的样式 */
+        .text {
+            font-size: 30px;
+            color: #9400D3; /* 设置文字颜色为淡紫色 */
+            margin: 10px 0; /* 上下边距 */
+            font-family: "楷体"; /* 设置字体为楷体 */
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw; /* 视口宽度 */
+            height: 100vh; /* 视口高度 */
+            background-image: url('qianse.jpg'); /* 静态图片 */
+            background-size: cover; /* 背景图片全屏 */
+            background-position: center; /* 背景图片居中 */
+            background-repeat: no-repeat; /* 背景图片不重复 */
+            display: flex; /* 使用Flexbox布局 */
+            justify-content: center; /* 水平居中 */
+            align-items: center; /* 垂直居中 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="dongtai.gif" alt="动态图片" class="dynamic-image">
+        <div class="text">你是一头猪吗？？？</div>
+        <div id="choiceForm">
+            <div class="button" id="yes">是的</div>
+            <div class="button" id="no">不是的</div>
+        </div>
+        <div id="message"></div> <!-- 将提示信息的div放在这里 -->
+    </div>
+    <script>
+        // 获取按钮和提示信息的元素
+        const yesButton = document.getElementById('yes');
+        const noButton = document.getElementById('no');
+        const message = document.getElementById('message');
+
+        // 定义“否”按钮的提示文字数组
+        const noMessages = [
+            "“哎呀，别谦虚了，你这么可爱，猪都要自愧不如了！",
+            "没事，猪都比你诚实，至少它们不会否认自己是猪。",
+            "你这么可爱，猪见了都要喊你一声‘前辈’！",
+            "别装了，猪都比你低调，至少它们不会否认自己的身份！",
+            "你这么优秀，猪都要给你颁个‘最佳模仿奖’",
+            "猪都比你谦虚，至少它们不会否认自己是猪。",
+            "你这么有才华，猪都要请你当形象代言人了！",
+            "别谦虚了，猪都比你诚实，至少它们不会否认自己是猪。"
+        ];
+
+        // 添加点击事件监听
+        yesButton.addEventListener('click', function() {
+            // 显示提示信息
+            message.textContent = "恭喜你，终于找到了自己的同伴了，他们在这里等着你呢";
+            message.style.display = 'block';
+
+            // 3秒后跳转页面
+            setTimeout(function() {
+                window.location.href = "new_file.html"; // 修改为你的目标页面路径
+            }, 2000); // 3000毫秒（3秒）后执行跳转
+        });
+
+        noButton.addEventListener('click', function() {
+            // 清除之前的选中状态
+            yesButton.classList.remove('selected');
+            noButton.classList.remove('selected');
+            // 设置当前按钮为选中状态
+            noButton.classList.add('selected');
+            // 随机选择一条提示文字
+            const randomMessage = noMessages[Math.floor(Math.random() * noMessages.length)];
+            message.textContent = randomMessage;
+            message.style.display = 'block';
+        });
+    </script>
+</body>
+</html>

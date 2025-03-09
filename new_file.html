@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猪猪的网页</title>
+    <style>
+		 @keyframes colorChange {
+		            0% { color: red; }
+		            25% { color: blue; }
+		            50% { color: black; }
+		            75% { color: yellow; }
+		            100% { color: red; }
+		        }
+		.text {
+		            position: absolute;
+		            top: 25%; /* 垂直居中 */
+		            left:40%; /* 水平居中 */
+		            transform: translate(-50%, -50%); /* 精确居中 */
+		            color: black; /* 文字颜色 */
+		            font-size: 146px; /* 文字大小 */
+		            font-weight: bold; /* 文字加粗 */
+		            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* 文字阴影 */
+		            z-index: 10; /* 确保文字在图片上方 */
+					 font-family: "楷体";
+					 animation: colorChange 1s infinite;
+		        }
+		.text1 {
+		            position: absolute;
+		            top: 25%; /* 垂直居中 */
+		            left:60%; /* 水平居中 */
+		            transform: translate(-50%, -50%); /* 精确居中 */
+		            color: black; /* 文字颜色 */
+		            font-size: 146px; /* 文字大小 */
+		            font-weight: bold; /* 文字加粗 */
+		            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字阴影 */
+		            z-index: 10; /* 确保文字在图片上方 */
+					 font-family: "楷体";
+					 animation: colorChange 1.5s infinite;
+		        }
+		.text2 {
+		            position: absolute;
+		            top: 75%; /* 垂直居中 */
+		            left:40%; /* 水平居中 */
+		            transform: translate(-50%, -50%); /* 精确居中 */
+		            color: black; /* 文字颜色 */
+		            font-size: 146px; /* 文字大小 */
+		            font-weight: bold; /* 文字加粗 */
+		            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字阴影 */
+		            z-index: 10; /* 确保文字在图片上方 */
+					 font-family: "楷体";
+					 animation: colorChange 2s infinite;
+		        }
+		.text3 {
+		            position: absolute;
+		            top: 75%; /* 垂直居中 */
+		            left:60%; /* 水平居中 */
+		            transform: translate(-50%, -50%); /* 精确居中 */
+		            color: black; /* 文字颜色 */
+		            font-size: 146px; /* 文字大小 */
+		            font-weight: bold; /* 文字加粗 */
+		            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字阴影 */
+		            z-index: 10; /* 确保文字在图片上方 */
+					 font-family: "楷体";
+					 animation: colorChange 1.3s infinite;
+		        }
+		.text4 {
+		            position: absolute;
+		            top: 50%; /* 垂直居中 */
+		            left:50%; /* 水平居中 */
+		            transform: translate(-50%, -50%); /* 精确居中 */
+		            color: #FF1493; /* 文字颜色 */
+		            font-size: 80px; /* 文字大小 */
+		            font-weight: bold; /* 文字加粗 */
+		            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字阴影 */
+		            z-index: 10; /* 确保文字在图片上方 */
+					 font-family: "楷体";
+					 }
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            position: relative; /* 设置相对定位 */
+        }
+        img {
+            position: absolute; /* 绝对定位 */
+            width: 380px; /* 图片宽度 */
+        }
+        .img1 {
+            top: 50px; /* 距离顶部的距离 */
+            left: 15%; /* 距离左侧的距离 */
+            transform: translateX(-50%); /* 水平居中 */
+        }
+        .img2 {
+            top: 50px; /* 距离顶部的距离 */
+            right: 18%; /* 距离右侧的距离 */
+            transform: translateX(50%); /* 水平居中 */
+        }
+		.img3{
+			bottom: 50px; /* 距离底部的距离 */
+			left: 15%; /* 距离左侧的距离 */
+			transform: translateX(-50%); /* 水平居中 */
+			position: absolute; /* 绝对定位 */
+			width: 550px; /* 图片宽度 */
+		}
+		.img4{
+			bottom: 50px; /* 距离底部的距离 */
+			right: 0%; /* 距离右侧的距离 */
+			transform: translateX(-50%); /* 水平居中 */
+		}
+		.img5 {
+		    top: 230px; /* 距离顶部的距离 */
+		    left: 50%; /* 距离左侧的距离 */
+		    transform: translateX(-50%); /* 水平居中 */
+		}
+		
+    </style>
+</head>
+<body>
+	<div class="text">欢</div>
+	<div class="text1">迎</div>
+	<div class="text2">回</div>
+	<div class="text3">家</div>
+	<div class="text4">这里永远都是你的家</div>
+	<div>
+    <img src="zhuzhuxia.gif" alt="动态图片" class="img1">
+    <img src="zhuzhuxia1.gif" alt="动态图片" class="img2">
+	<img src="zhuzhuxia4.gif" alt="动态图片" class="img3">
+	<img src="zhuzhuxia3gif.gif" alt="动态图片" class="img4">
+	<img src="浪漫清新爱心_爱给网_aigei_com.gif" alt="动态图片" class="img5">
+	</div>
+	
+</body>
+</html>
